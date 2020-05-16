@@ -32,7 +32,7 @@ class DishDetail extends Component {
     
   
     renderComments(comments) {
-      var commentList = comments.map((comment) => {
+      const commentList = comments.map((comment) => {
         return (
           <li key={comment.id}>
             {comment.comment}
@@ -62,6 +62,7 @@ class DishDetail extends Component {
     if(this.props.dishes){
     // const me = this.props.dishes.map((Dish) => {
     return (
+      <div class="container">
       <div className="row">
         <div className="col-12 col-md-5 m-1">
           {this.renderDish(this.props.dishes)}
@@ -69,6 +70,7 @@ class DishDetail extends Component {
       <div className="col-12 col-md-5 m-1">
         {this.renderComments(this.props.dishes.comments)}
       </div>
+    </div>
     </div>
       // <div className="container">
       //   <div className="row">{menu}</div>
