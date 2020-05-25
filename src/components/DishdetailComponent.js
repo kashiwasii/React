@@ -36,7 +36,7 @@ function RenderComments({ comments, addComment, dishId }) {
         {comment.comment}
         <br />
         <br />
-        -- {comment.name},{" "}
+        -- {comment.author},{" "}
         {new Intl.DateTimeFormat("en-US", {
           year: "numeric",
           month: "short",
