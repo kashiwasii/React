@@ -45,12 +45,16 @@ function RenderComments({ comments, postComment, dishId }) {
       <Fade in>
         <li key={comment.id}>
           {comment.comment}
+          <br />
+          <br />
           -- {comment.author},{" "}
           {new Intl.DateTimeFormat("en-US", {
             year: "numeric",
             month: "short",
             day: "2-digit",
           }).format(new Date(Date.parse(comment.date)))}
+          <br />
+          <br />
         </li>
       </Fade>
     );
@@ -60,7 +64,7 @@ function RenderComments({ comments, postComment, dishId }) {
     <div>
       <h4>Comments</h4>
       <ul className="list-unstyled">
-        <Stagger>{commentList}</Stagger>
+        <Stagger in>{commentList}</Stagger>
       </ul>
       <CommentForm dishId={dishId} postComment={postComment} />
     </div>
